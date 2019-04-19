@@ -102,21 +102,22 @@ void pop(skiplist* SL, int search_key){
             tmp->next[i] = NULL;
             delete tmp->next[i];
         }
-        while(SL->max_lvl > 0 and SL->first->next[SL->max_lvl] == SL->last) SL->max_lvl--;
+        while(SL->max_lvl > 0 and SL->first->next[SL->max_lvl-1] == SL->last) SL->max_lvl--;
     }
 }
 
 void show(skiplist* SL, int max_val){
     SLnode* tmp = SL->first;
     for(int i = SL->max_lvl-1; i >=0; i--){
-        tmp = SL->first;
+        tmp = SL->first->next[i];
         printf("level %d:\n", i);
-        while(tmp->key < max_val){
+        while(tmp->key < max_val) {
             printf("%d ", tmp->key);
             tmp = tmp->next[i];
         }
         printf("\n");
     }
+    printf("maxlvl: %d\n", SL->max_lvl);
 }
 int main() {
     int max_val = 100;

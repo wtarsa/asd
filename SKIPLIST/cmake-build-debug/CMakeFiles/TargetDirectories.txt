@@ -1,0 +1,3 @@
+/home/wiktor/studia/asd/SKIPLIST/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wiktor/studia/asd/SKIPLIST/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wiktor/studia/asd/SKIPLIST/cmake-build-debug/CMakeFiles/SKIPLIST.dir
